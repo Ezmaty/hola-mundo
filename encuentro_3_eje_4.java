@@ -30,7 +30,7 @@ public class encuentro_3_eje_4 {
         String palabra;
         System.out.println("Ingrese una palabra que comience con A");
         palabra = leer.nextLine();
-        if (palabra.startsWith("A")){
+        if (palabra.substring(0,1).equals("A")) {
             System.out.println("CORRECTO");
         }else{
             System.out.println("INCORRECTO");

@@ -35,6 +35,7 @@ public class encuentro_3_eje_6 {
         int numero2 = 0;
         int opcion = 0;
         int resultado = 0;
+        String respuesta;
         
         while (opcion != 5){
             System.out.println("Escoja la opcion deseada");
@@ -84,8 +85,13 @@ public class encuentro_3_eje_6 {
                     System.out.println("El resultado es: " + resultado);
                     break;
                 case 5:
-                    System.out.println("Gracias por usar nuestra calculadora");
+                    System.out.println("Esta seguro que desea salir?");
+                    respuesta = leer.next();
+                    if (respuesta.equals("S")){
+                        System.out.println("Gracias por usar nuestra calculadora");
                     break;
+                    }
+                   
             }
         }
     }
