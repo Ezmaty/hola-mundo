@@ -1,0 +1,60 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pooej01;
+
+import Entidad.Operacion;
+import java.util.Scanner;
+
+
+
+/**
+ *
+ * @author cosas
+ */
+public class Encuentro_7_eje_3 {
+    public static void main(String[] args){
+        /*
+        Crear una clase llamada Operacion que tenga como atributos privados 
+        numero1 y numero2. A continuación, se deben crear los siguientes 
+        métodos:
+        - Método constructor con todos los atributos pasados por parámetro.
+        - Método constructor sin los atributos pasados por parámetro.
+        - Métodos get y set.
+        - Método para crearOperacion(): que le pide al usuario los dos 
+          números y los guarda en los atributos del objeto.
+        - Método sumar(): calcular la suma de los números y devolver el 
+          resultado al main.
+        - Método restar(): calcular la resta de los números y devolver el 
+          resultado al main
+        - Método multiplicar(): primero valida que no se haga una 
+          multiplicación por cero, si fuera a multiplicar por cero, el método 
+          devuelve 0 y se le informa al usuario el error. Si no, se hace la 
+          multiplicación y se devuelve el resultado al main
+        - Método dividir(): primero valida que no se haga una división por cero,  
+          si fuera a pasar una división por cero, el método devuelve 0 y se le 
+          informa al usuario el error se le informa al usuario. Si no, se hace la 
+          división y se devuelve el resultado al main.
+
+        */
+        
+        Operacion operacion = new Operacion();
+        Scanner leer = new Scanner(System.in);
+        double numero1, numero2, resultado;
+        
+        System.out.println("Ingrese los numeros a operar");
+        numero1 = leer.nextDouble();
+        numero2 = leer.nextDouble();
+        
+        operacion.setNumero1(numero1);
+        operacion.setNumero2(numero2);
+        
+        System.out.println("La suma de los numeros es: " + operacion.suma(numero1, numero2));
+        System.out.println("La resta de los nmeros es: " + operacion.resta(numero1, numero2));
+        System.out.println("La multiplicacion de los numeros es: " + operacion.multiplicacion(numero1, numero2));
+        System.out.println("La division de los numeros es: " + operacion.division(numero1, numero2));
+    }
+    
+}
